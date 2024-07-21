@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { NavbarItemsProps } from "./navbar.types";
 import { FC } from "react";
 
-const NavbarItem: FC<NavbarItemsProps> = ({ children }) => {
+const NavbarItem: FC<NavbarItemsProps> = ({ children, title, icon }) => {
 	return (
 		<Box
 			sx={{
@@ -14,13 +14,17 @@ const NavbarItem: FC<NavbarItemsProps> = ({ children }) => {
 				justifyContent: "center",
 				alignItems: "center",
 				cursor: "pointer",
-                ":hover ":{
-                    bgcolor:"#F54A58"
-                }
+				color: "gray",
+				":hover ": {
+					bgcolor: "var(--color-primary)",
+					color: "white",
+				},
 			}}
 		>
-			{" "}
-			{children}{" "}
+			<div className="h-full w-full flex flex-col items-center justify-center navbar-item-container gap-1">
+				<span className="">{icon}</span>
+				<p>{title}</p>
+			</div>
 		</Box>
 	);
 };

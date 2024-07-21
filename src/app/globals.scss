@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../styles/index.scss";
+
+@layer base {
+	html {
+		font-family: var(--font-fanum);
+	}
+
+	:lang(en) {
+		font-family: var(--font-inter);
+	}
+}
