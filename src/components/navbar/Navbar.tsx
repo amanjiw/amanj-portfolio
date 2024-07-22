@@ -7,11 +7,15 @@ const Navbar = () => {
 	return (
 		<Paper
 			elevation={1}
-			sx={{ height: 100, width: "fit-content" }}
-			className="p-5 rounded-2xl flex gap-5 justify-center items-center  self-end"
+			sx={{ height: 130, width: "fit-content" }}
+			className="p-9 rounded-2xl flex gap-5 justify-center items-center  self-end"
 		>
 			{navbarData.map((item) => (
-				<NavbarItem title={item.title} icon={item.icon} />
+				<NavbarItem
+					title={item.title}
+					icon={item.icon}
+					href={item.href}
+				/>
 			))}
 		</Paper>
 	);

@@ -11,6 +11,7 @@ import { Container } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import SideBar from "@/components/sidebar/SideBar";
 import Navbar from "@/components/navbar/Navbar";
+import { fullName } from "@/constants";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -54,10 +55,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html
-			dir="rtl"
-			className={`${inter.variable} ${fanum.variable} bg-secondary`}
-		>
+		<html dir="rtl" className={`${inter.variable} ${fanum.variable}`}>
 			<body className="">
 				<Container maxWidth="xl" className=" mt-28 relative">
 					<Grid2 container columnSpacing={2}>
@@ -69,8 +67,12 @@ export default function RootLayout({
 						<Grid2 xs={8}>
 							<div className="h-full flex flex-col">
 								<Navbar />
-								<div className="flex min-h-screen flex-col items-center justify-between bg-white mt-2 rounded-2xl">
+								<div className="flex min-h-screen flex-col items-center justify-between bg-white my-2 rounded-2xl pt-10 pb-5">
 									{children}
+									<span className="text-gray-500 font-light text-sm ">
+										© 2024 تمامی حقوق مادی و معنوی متعلق به
+										<span className="text-primary"> {fullName} </span> است.
+									</span>
 								</div>
 							</div>
 						</Grid2>

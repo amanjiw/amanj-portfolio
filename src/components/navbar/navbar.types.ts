@@ -4,4 +4,5 @@ export type NavbarItemsProps = {
 	children?: ReactNode;
 	title: string;
 	icon?: ReactNode;
+	href?: string;
 };

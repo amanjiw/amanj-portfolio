@@ -6,9 +6,11 @@
 @layer base {
 	html {
 		font-family: var(--font-fanum);
+        background: linear-gradient(240.75deg, #afe6f0 -7.54%, #ececec 55.54%, #ffc1c1 101.81%);
 	}
 
 	:lang(en) {
 		font-family: var(--font-inter);
 	}
 }
+

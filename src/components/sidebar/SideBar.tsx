@@ -15,10 +15,10 @@ const SideBar = () => {
 					height={260}
 					width={260}
 					alt="profile pic"
-					className="rounded-2xl shadow-2xl"
+					className="rounded-full shadow-2xl"
 				/>
 			</div>
-			<div className=" flex justify-center bg-white flex-col items-center rounded-2xl px-8 pt-12 w-full">
+			<div className=" flex justify-center bg-white flex-col items-center rounded-2xl px-8 py-12 w-full">
 				<div className="over-all flex flex-col items-center w-full mt-4">
 					<h2 className="developer-name text-xl">{fullName}</h2>
 					<h4 className="text-gray-400 text-sm mt-1 ">
@@ -45,13 +45,13 @@ const SideBar = () => {
 						<ContractItem contract={contract} />
 					))}
 				</div>
-				<button className="download-btn">
+				<button className="download-btn mt-5">
 					{" "}
-					دانلود رزومه
 					<span>
 						{" "}
 						<Download />{" "}
 					</span>
+					دانلود رزومه
 				</button>
 			</div>
 		</div>
